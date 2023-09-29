@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-ticketmastersdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ticketmaster/iOS-TicketmasterSDK",
+      "state" : {
+        "revision" : "359734b32f7c16482e9ee87632d17b3b209e471a",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}
