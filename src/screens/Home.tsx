@@ -3,7 +3,6 @@ import {
   Platform,
   Pressable,
   SectionList,
-  StatusBar,
   StyleSheet,
   Text,
   View,
@@ -52,6 +51,12 @@ const Home = () => {
           onPress: () => getMemberInfo(),
           last: true,
         },
+        {
+          title: 'Get Token',
+          platforms: ['ios', 'android'],
+          onPress: () => getToken(),
+          last: true,
+        },
       ],
     },
     {
@@ -75,11 +80,20 @@ const Home = () => {
     }, 500);
   };
 
+  const onConfigureAccountsSDK = async () => {
+    try {
+      const result = await AccountsSDK.configureAccountsSDK();
+      console.log('Configuration set: ', result);
+    } catch (e: any) {
+      console.log('Accounts SDK Configuration error:', (e as Error).message);
+    }
+  };
+
   const onLogin = async () => {
     try {
       if (Platform.OS === 'android') {
         AccountsSDK.login((resultCode: any) => {
-          console.log('login result code: ', resultCode);
+          console.log('Login result code: ', resultCode);
         });
       } else if (Platform.OS === 'ios') {
         const result = await AccountsSDK.login();
@@ -93,9 +107,9 @@ const Home = () => {
   const onLogout = async () => {
     try {
       await AccountsSDK.logout();
-      console.log('user logged out');
+      console.log('User logged out');
     } catch (e: any) {
-      console.log('could not log out: ', (e as Error).message);
+      console.log('Could not log out: ', (e as Error).message);
     }
   };
 
@@ -103,14 +117,14 @@ const Home = () => {
     try {
       if (Platform.OS === 'android') {
         const result = await AccountsSDK.isLoggedIn();
-        console.log('is logged in: ', result);
+        console.log('Is logged in: ', result);
       } else if (Platform.OS === 'ios') {
-        const result = await AccountsSDK.refreshToken();
-        const hasToken = result ? true : false;
-        console.log('is logged in: ', hasToken);
+        const result = await AccountsSDK.isLoggedIn();
+        console.log('Is logged in: ', result.result);
       }
     } catch (e: any) {
-      console.log('IsLoggedIn error: ', (e as Error).message);
+      !(e as Error).message.includes('User not logged in') &&
+        console.log('IsLoggedIn error: ', (e as Error).message);
     }
   };
 
@@ -126,18 +140,26 @@ const Home = () => {
   const getMemberInfo = async () => {
     try {
       const result = await AccountsSDK.getMemberInfo();
+      // Android result is a JSON String not an Object
       console.log('Member Info: ', result);
     } catch (e: any) {
-      console.log('Account SDK Refresh Token error: ', (e as Error).message);
+      console.log('Member Info error: ', (e as Error).message);
     }
   };
 
-  const onConfigureAccountsSDK = async () => {
+  const getToken = async () => {
     try {
-      const result = await AccountsSDK.configureAccountsSDK();
-      console.log('configuration set: ', result);
+      if (Platform.OS === 'android') {
+        const result = await AccountsSDK.refreshToken();
+        console.log('Accounts SDK Login access token:', result);
+      } else if (Platform.OS === 'ios') {
+        // iOS getToken has the exact same Native logic as refreshToken, but will not display the login UI if a user is not logged in
+        const result = await AccountsSDK.getToken();
+        console.log('Accounts SDK Login access token:', result);
+      }
     } catch (e: any) {
-      console.log('Accounts SDK Configuration error:', (e as Error).message);
+      !(e as Error).message.includes('User not logged in') &&
+        console.log('Get Token error: ', (e as Error).message);
     }
   };
 

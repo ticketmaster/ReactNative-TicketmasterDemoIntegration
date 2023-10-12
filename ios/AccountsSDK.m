@@ -30,4 +30,8 @@ RCT_EXTERN_METHOD(refreshToken: (RCTPromiseResolveBlock)resolve reject:(RCTPromi
 
 RCT_EXTERN_METHOD(getMemberInfo: (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(getToken: (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(isLoggedIn: (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
+
 @end

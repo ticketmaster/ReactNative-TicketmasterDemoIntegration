@@ -50,7 +50,9 @@ class AccountsSDK: RCTEventEmitter, TMAuthenticationDelegate  {
   }
   
   override func supportedEvents() -> [String]! {
-    return ["loginStarted"];
+    // replace return [""]; with below to send Native Event to React Native side
+    // return ["loginStarted"];
+    return [""];
   }
   
   
@@ -112,6 +114,37 @@ class AccountsSDK: RCTEventEmitter, TMAuthenticationDelegate  {
     }
   }
   
+  @objc public func getToken(_ resolve: @escaping ([String: Any]) -> Void, reject: @escaping (_ code: String, _ message: String, _ error: NSError) -> Void) {
+    TMAuthentication.shared.validToken(showLoginIfNeeded: false) { authToken in
+      print("Token Retrieved")
+      let data = ["accessToken": authToken.accessToken]
+      resolve(data)
+    } aborted: { oldAuthToken, backend in
+      print("Token Retrieval Aborted ")
+      let data = ["accessToken": ""]
+      resolve(data)
+    } failure: { oldAuthToken, error, backend in
+      print("Token Retrieval Error: \(error.localizedDescription)")
+      reject( "Accounts SDK Token Retrieval Error", error.localizedDescription, error as NSError)
+    }
+  }
+  
+  @objc public func isLoggedIn(_ resolve: @escaping ([String: Bool]) -> Void, reject: @escaping (_ code: String, _ message: String, _ error: NSError) -> Void) {
+    
+    TMAuthentication.shared.memberInfo { memberInfo in
+      guard let id = memberInfo.globalID else {
+        resolve(["result": false])
+        return
+      }
+      
+      let hasToken = TMAuthentication.shared.hasToken()
+      resolve(["result": hasToken])
+      
+    } failure: { oldMemberInfo, error, backend in
+      reject("Accounts SDK Is Logged In Error", error.localizedDescription, error as NSError)
+    }
+  }
+  
   func onStateChanged(backend: TicketmasterAuthentication.TMAuthentication.BackendService?, state: TicketmasterAuthentication.TMAuthentication.ServiceState, error: (Error)?) {
     print("Backend TicketmasterAuthentication \(state.rawValue)")
     switch state{
@@ -122,7 +155,9 @@ class AccountsSDK: RCTEventEmitter, TMAuthenticationDelegate  {
     case .serviceConfigurationCompleted:
       return
     case .loginStarted:
-      self.sendEvent(withName: "loginStarted", body: ["loginStarted:": "loginStarted event sent"])
+      // Replace return with below to send Native event to React Native side
+      // self.sendEvent(withName: "loginStarted", body: ["loginStarted:": "loginStarted event sent"])
+      return
     case .loginPresented:
       return
     case .loggedIn:
