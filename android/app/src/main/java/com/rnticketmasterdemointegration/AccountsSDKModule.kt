@@ -42,6 +42,7 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
             ) {
                 if (mResultCallback != null) {
                     mResultCallback!!.invoke(resultCode)
+                    mResultCallback = null
                 }
             }
         }
@@ -52,7 +53,7 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
 
     @ReactMethod
     fun login(resultCallback: Callback) {
-        runBlocking {
+        runBlocking() {
             mResultCallback = resultCallback
             val currentFragmentActivity = currentActivity as FragmentActivity
             val authentication = TMAuthentication.Builder()

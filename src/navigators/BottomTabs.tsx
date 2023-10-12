@@ -49,6 +49,7 @@ const BottomTabs = () => {
         component={MyEvents}
         options={{
           tabBarLabel: 'Tickets SDK (Embedded)',
+          unmountOnBlur: true,
           tabBarIcon: ({focused}) => (
             <MyEventsIcon fill={focused ? '#026cdf' : 'grey'} />
           ),
