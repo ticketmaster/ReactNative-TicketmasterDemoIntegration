@@ -57,3 +57,16 @@ yarn ios
 ```
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+
+## Environment variables
+
+You will need an API key for this app to run, you can get one here [Developer Account](https://developer-acct.ticketmaster.com/user/login)
+
+For the Retail SDK (PrePurchase and Purchase) views, you will need an event ID, usually you would get this from API responses data from [Discovery API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/). In this app, you can create a .env file in the root of the project and put in the below variables. Replace "someapikey" with the API key from your Ticketmaster Developer Account.
+
+```bash
+API_KEY=someapikey
+DEMO_EVENT_ID=04005EF94A0053AD
+DEMO_ATTRACTION_ID=1646704
+DEMO_HOST_ID=82789
+```
