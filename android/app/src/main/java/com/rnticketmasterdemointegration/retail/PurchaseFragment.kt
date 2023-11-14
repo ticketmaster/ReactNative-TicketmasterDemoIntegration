@@ -44,6 +44,7 @@ class PurchaseFragment : Fragment() {
                 }
             ).apply {
                 childFragmentManager.fragmentFactory = this
+                parentFragmentManager.fragmentFactory = this
             }
 
             val authentication = TMAuthentication.Builder()
