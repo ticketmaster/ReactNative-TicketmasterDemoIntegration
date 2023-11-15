@@ -24,6 +24,7 @@ import com.ticketmaster.prepurchase.data.CoordinatesWithMarketDomain
 import com.ticketmaster.prepurchase.data.Location
 import com.ticketmaster.prepurchase.listener.TMPrePurchaseNavigationListener
 import com.ticketmaster.purchase.TMPurchase
+import com.ticketmaster.purchase.TMPurchaseFragmentFactory
 import com.ticketmaster.purchase.TMPurchaseWebsiteConfiguration
 import kotlinx.coroutines.launch
 
@@ -47,7 +48,8 @@ class PrePurchaseFragment : Fragment() {
             activity = requireActivity(),
             closeScreen = {
                 childFragmentManager.popBackStack()
-            }
+            },
+            parentFragmentManager = parentFragmentManager
         )
         lifecycleScope.launch {
             val factory = TMPrePurchaseFragmentFactory(
@@ -81,7 +83,8 @@ class PrePurchaseNavigationListener(
     private val apiKey: String,
     private val context: Context,
     private val activity: Activity,
-    private val fragmentManager: FragmentManager
+    private val fragmentManager: FragmentManager,
+    private val parentFragmentManager: FragmentManager
 ): TMPrePurchaseNavigationListener {
     override fun onDidRequestCurrentLocation(
         globalMarketDomain: TMMarketDomain?,
@@ -105,6 +108,15 @@ class PrePurchaseNavigationListener(
         abstractEntity: DiscoveryAbstractEntity?,
         event: DiscoveryEvent
     ) {
+        TMPurchaseFragmentFactory(
+            tmPurchaseNavigationListener = PurchaseNavigationListener {
+                fragmentManager.popBackStack()
+            }
+        ).apply {
+            fragmentManager.fragmentFactory = this
+            parentFragmentManager.fragmentFactory = this
+        }
+
         val tmPurchase = TMPurchase(
             apiKey = apiKey,
             brandColor = ContextCompat.getColor(context, R.color.black)
@@ -121,6 +133,7 @@ class PrePurchaseNavigationListener(
 
         val purchaseFragment = PurchaseFragment()
         purchaseFragment.arguments = bundle
+        purchaseFragment.setEventId(event.hostID)
         fragmentManager.beginTransaction()
             .add(R.id.venue_container, purchaseFragment)
             .commit()
