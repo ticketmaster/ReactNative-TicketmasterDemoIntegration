@@ -55,26 +55,6 @@ const BottomTabs = () => {
           ),
         }}
       />
-      <Tab.Screen
-        name="Retail PrePurchase"
-        component={PrePurchase}
-        options={{
-          tabBarLabel: 'Retail PrePurchase',
-          tabBarIcon: ({focused}) => (
-            <MyEventsIcon fill={focused ? '#026cdf' : 'grey'} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Retail Purchase"
-        component={Purchase}
-        options={{
-          tabBarLabel: 'Retail Purchase',
-          tabBarIcon: ({focused}) => (
-            <MyEventsIcon fill={focused ? '#026cdf' : 'grey'} />
-          ),
-        }}
-      />
     </Tab.Navigator>
   );
 };
