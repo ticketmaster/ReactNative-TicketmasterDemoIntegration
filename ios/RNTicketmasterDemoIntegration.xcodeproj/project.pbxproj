@@ -31,8 +31,6 @@
 		C4B8B7592AC310EF0093749A /* TicketmasterPurchase in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7582AC310EF0093749A /* TicketmasterPurchase */; };
 		C4B8B75B2AC310EF0093749A /* TicketmasterSecureEntry in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B75A2AC310EF0093749A /* TicketmasterSecureEntry */; };
 		C4B8B75D2AC310EF0093749A /* TicketmasterTickets in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B75C2AC310EF0093749A /* TicketmasterTickets */; };
-		F35B2A9A2AC205F30060ADBB /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B2A992AC205F30060ADBB /* PurchaseView.swift */; };
-		F35B2A9C2AC217BB0060ADBB /* PrePurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B2A9B2AC217BB0060ADBB /* PrePurchaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +72,6 @@
 		C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsSdkViewController.swift; sourceTree = "<group>"; };
 		C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTTicketsSdkViewController.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F35B2A992AC205F30060ADBB /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
-		F35B2A9B2AC217BB0060ADBB /* PrePurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePurchaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +138,6 @@
 				C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */,
 				C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */,
 				C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */,
-				F35B2A992AC205F30060ADBB /* PurchaseView.swift */,
-				F35B2A9B2AC217BB0060ADBB /* PrePurchaseView.swift */,
 			);
 			name = RNTicketmasterDemoIntegration;
 			sourceTree = "<group>";
@@ -488,8 +482,6 @@
 				C41E75F92A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m in Sources */,
 				C41E75FD2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m in Sources */,
 				C41E75F32A97ABFE006DA89D /* AccountsSDK.swift in Sources */,
-				F35B2A9A2AC205F30060ADBB /* PurchaseView.swift in Sources */,
-				F35B2A9C2AC217BB0060ADBB /* PrePurchaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

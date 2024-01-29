@@ -9,15 +9,11 @@ import TicketmasterAuthentication
 import TicketmasterTickets
 import TicketmasterPurchase
 
-class PurchaseSdkViewController: UIViewController, SendEventIdDelegate {
+class PurchaseSdkViewController: UIViewController {
   var eventId: String = "eventId"
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    let customView = PurchaseView()
-    customView.delegate = self
-    self.view = customView
     
     let apiKey = RNCConfig.env(for: "API_KEY") ?? ""
     let tmxServiceSettings = TMAuthentication.TMXSettings(apiKey: apiKey,
@@ -51,7 +47,6 @@ class PurchaseSdkViewController: UIViewController, SendEventIdDelegate {
         // Tickets is configured, now we are ready to present TMTicketsViewController or TMTicketsView
         print(" - Tickets SDK Configured")
         
-        customView.getEventId()
         let edpNav = TMPurchaseNavigationController.eventDetailsNavigationController(eventIdentifier: self.eventId, marketDomain: .US)
         edpNav.modalPresentationStyle = .fullScreen
         self.present(edpNav, animated: false)

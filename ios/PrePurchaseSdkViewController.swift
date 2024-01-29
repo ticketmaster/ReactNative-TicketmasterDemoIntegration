@@ -9,15 +9,11 @@ import TicketmasterAuthentication
 import TicketmasterTickets
 import TicketmasterPrePurchase
 
-class PrePurchaseSdkViewController: UIViewController, SendAttractionIdDelegate {
+class PrePurchaseSdkViewController: UIViewController {
   var attractionId: String = "attractionId"
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let customView = PrePurchaseView()
-    customView.delegate = self
-    self.view = customView
     
     print("PrePurchaseSdkViewController viewDidLoad")
     let apiKey = RNCConfig.env(for: "API_KEY") ?? ""
@@ -54,7 +50,6 @@ class PrePurchaseSdkViewController: UIViewController, SendAttractionIdDelegate {
         // Tickets is configured, now we are ready to present TMTicketsViewController or TMTicketsView
         print(" - Tickets SDK Configured")
         
-        customView.getAttractionId()
         let viewController = TMPrePurchaseViewController.attractionDetailsViewController(attractionIdentifier: self.attractionId, enclosingEnvironment: .modalPresentation)
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false)
