@@ -24,15 +24,15 @@
 		C41E76012A97ADF9006DA89D /* PrePurchaseSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */; };
 		C4B69D2D2A9F9C7D00BD78CC /* TicketsSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */; };
 		C4B69D2F2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */; };
-		C4B8B7512AC310EF0093749A /* TicketmasterAuthentication in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7502AC310EF0093749A /* TicketmasterAuthentication */; };
-		C4B8B7532AC310EF0093749A /* TicketmasterDiscoveryAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7522AC310EF0093749A /* TicketmasterDiscoveryAPI */; };
-		C4B8B7552AC310EF0093749A /* TicketmasterFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7542AC310EF0093749A /* TicketmasterFoundation */; };
-		C4B8B7572AC310EF0093749A /* TicketmasterPrePurchase in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7562AC310EF0093749A /* TicketmasterPrePurchase */; };
-		C4B8B7592AC310EF0093749A /* TicketmasterPurchase in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7582AC310EF0093749A /* TicketmasterPurchase */; };
-		C4B8B75B2AC310EF0093749A /* TicketmasterSecureEntry in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B75A2AC310EF0093749A /* TicketmasterSecureEntry */; };
-		C4B8B75D2AC310EF0093749A /* TicketmasterTickets in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B75C2AC310EF0093749A /* TicketmasterTickets */; };
 		F35B2A9A2AC205F30060ADBB /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B2A992AC205F30060ADBB /* PurchaseView.swift */; };
 		F35B2A9C2AC217BB0060ADBB /* PrePurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B2A9B2AC217BB0060ADBB /* PrePurchaseView.swift */; };
+		F36D85122B6821F7007B5770 /* TicketmasterAuthentication in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85112B6821F7007B5770 /* TicketmasterAuthentication */; };
+		F36D85142B6821F7007B5770 /* TicketmasterDiscoveryAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85132B6821F7007B5770 /* TicketmasterDiscoveryAPI */; };
+		F36D85162B6821F7007B5770 /* TicketmasterFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85152B6821F7007B5770 /* TicketmasterFoundation */; };
+		F36D85182B6821F7007B5770 /* TicketmasterPrePurchase in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85172B6821F7007B5770 /* TicketmasterPrePurchase */; };
+		F36D851A2B6821F7007B5770 /* TicketmasterPurchase in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85192B6821F7007B5770 /* TicketmasterPurchase */; };
+		F36D851C2B6821F7007B5770 /* TicketmasterSecureEntry in Frameworks */ = {isa = PBXBuildFile; productRef = F36D851B2B6821F7007B5770 /* TicketmasterSecureEntry */; };
+		F36D851E2B6821F7007B5770 /* TicketmasterTickets in Frameworks */ = {isa = PBXBuildFile; productRef = F36D851D2B6821F7007B5770 /* TicketmasterTickets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,13 +91,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4B8B7572AC310EF0093749A /* TicketmasterPrePurchase in Frameworks */,
-				C4B8B7592AC310EF0093749A /* TicketmasterPurchase in Frameworks */,
-				C4B8B75D2AC310EF0093749A /* TicketmasterTickets in Frameworks */,
-				C4B8B7532AC310EF0093749A /* TicketmasterDiscoveryAPI in Frameworks */,
-				C4B8B7552AC310EF0093749A /* TicketmasterFoundation in Frameworks */,
-				C4B8B7512AC310EF0093749A /* TicketmasterAuthentication in Frameworks */,
-				C4B8B75B2AC310EF0093749A /* TicketmasterSecureEntry in Frameworks */,
+				F36D85182B6821F7007B5770 /* TicketmasterPrePurchase in Frameworks */,
+				F36D851A2B6821F7007B5770 /* TicketmasterPurchase in Frameworks */,
+				F36D851E2B6821F7007B5770 /* TicketmasterTickets in Frameworks */,
+				F36D85142B6821F7007B5770 /* TicketmasterDiscoveryAPI in Frameworks */,
+				F36D85162B6821F7007B5770 /* TicketmasterFoundation in Frameworks */,
+				F36D85122B6821F7007B5770 /* TicketmasterAuthentication in Frameworks */,
+				F36D851C2B6821F7007B5770 /* TicketmasterSecureEntry in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-RNTicketmasterDemoIntegration.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,13 +243,13 @@
 			);
 			name = RNTicketmasterDemoIntegration;
 			packageProductDependencies = (
-				C4B8B7502AC310EF0093749A /* TicketmasterAuthentication */,
-				C4B8B7522AC310EF0093749A /* TicketmasterDiscoveryAPI */,
-				C4B8B7542AC310EF0093749A /* TicketmasterFoundation */,
-				C4B8B7562AC310EF0093749A /* TicketmasterPrePurchase */,
-				C4B8B7582AC310EF0093749A /* TicketmasterPurchase */,
-				C4B8B75A2AC310EF0093749A /* TicketmasterSecureEntry */,
-				C4B8B75C2AC310EF0093749A /* TicketmasterTickets */,
+				F36D85112B6821F7007B5770 /* TicketmasterAuthentication */,
+				F36D85132B6821F7007B5770 /* TicketmasterDiscoveryAPI */,
+				F36D85152B6821F7007B5770 /* TicketmasterFoundation */,
+				F36D85172B6821F7007B5770 /* TicketmasterPrePurchase */,
+				F36D85192B6821F7007B5770 /* TicketmasterPurchase */,
+				F36D851B2B6821F7007B5770 /* TicketmasterSecureEntry */,
+				F36D851D2B6821F7007B5770 /* TicketmasterTickets */,
 			);
 			productName = RNTicketmasterDemoIntegration;
 			productReference = 13B07F961A680F5B00A75B9A /* RNTicketmasterDemoIntegration.app */;
@@ -282,7 +282,7 @@
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			packageReferences = (
-				C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */,
+				F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */,
 			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
@@ -791,50 +791,50 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */ = {
+		F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ticketmaster/iOS-TicketmasterSDK.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.1;
+				version = 1.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C4B8B7502AC310EF0093749A /* TicketmasterAuthentication */ = {
+		F36D85112B6821F7007B5770 /* TicketmasterAuthentication */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterAuthentication;
 		};
-		C4B8B7522AC310EF0093749A /* TicketmasterDiscoveryAPI */ = {
+		F36D85132B6821F7007B5770 /* TicketmasterDiscoveryAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterDiscoveryAPI;
 		};
-		C4B8B7542AC310EF0093749A /* TicketmasterFoundation */ = {
+		F36D85152B6821F7007B5770 /* TicketmasterFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterFoundation;
 		};
-		C4B8B7562AC310EF0093749A /* TicketmasterPrePurchase */ = {
+		F36D85172B6821F7007B5770 /* TicketmasterPrePurchase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterPrePurchase;
 		};
-		C4B8B7582AC310EF0093749A /* TicketmasterPurchase */ = {
+		F36D85192B6821F7007B5770 /* TicketmasterPurchase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterPurchase;
 		};
-		C4B8B75A2AC310EF0093749A /* TicketmasterSecureEntry */ = {
+		F36D851B2B6821F7007B5770 /* TicketmasterSecureEntry */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterSecureEntry;
 		};
-		C4B8B75C2AC310EF0093749A /* TicketmasterTickets */ = {
+		F36D851D2B6821F7007B5770 /* TicketmasterTickets */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4B8B74F2AC310EF0093749A /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
+			package = F36D85102B6821F7007B5770 /* XCRemoteSwiftPackageReference "iOS-TicketmasterSDK" */;
 			productName = TicketmasterTickets;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -29,11 +29,6 @@ class AccountsSDK: RCTEventEmitter, TMAuthenticationDelegate  {
     let brandedServiceSettings = TMAuthentication.BrandedServiceSettings(tmxSettings: tmxServiceSettings,
                                                                          branding: branding)
     
-    
-    
-    
-    
-    
     // configure TMAuthentication with Settings and Branding
     print("Authentication SDK Configuring...")
     
