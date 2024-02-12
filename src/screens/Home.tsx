@@ -11,6 +11,7 @@ import {NativeModules} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ChevronRight from '../assets/svg/ChevronRight';
 import {TicketsSdk} from '../components/TicketsSdk.ios';
+import Config from 'react-native-config';
 
 const Home = () => {
   const {AccountsSDK} = NativeModules;
@@ -55,6 +56,22 @@ const Home = () => {
           title: 'Get Token',
           platforms: ['ios', 'android'],
           onPress: () => getToken(),
+          last: true,
+        },
+        {
+          title: 'Show Retail PrePurchase',
+          platforms: ['android', 'ios'],
+          onPress: () => {
+            AccountsSDK.presentPrePurchase(Config.DEMO_ATTRACTION_ID);
+          },
+          last: true,
+        },
+        {
+          title: 'Show Retail Purchase',
+          platforms: ['android', 'ios'],
+          onPress: () => {
+            AccountsSDK.presentPurchase(Config.DEMO_EVENT_ID);
+          },
           last: true,
         },
       ],

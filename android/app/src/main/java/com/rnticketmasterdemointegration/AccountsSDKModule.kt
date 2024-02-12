@@ -14,6 +14,8 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.google.gson.Gson
+import com.rnticketmasterdemointegration.retail.PrePurchaseActivity
+import com.rnticketmasterdemointegration.retail.PurchaseActivity
 import com.ticketmaster.authenticationsdk.AuthSource
 import com.ticketmaster.authenticationsdk.TMAuthentication
 import com.ticketmaster.authenticationsdk.TMXDeploymentEnvironment
@@ -129,6 +131,22 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
                 }
             }
         }
+    }
+
+    @ReactMethod
+    fun presentPrePurchase(eventId: String) {
+        val context = currentActivity
+        val intent = Intent(context, PrePurchaseActivity::class.java)
+        intent.putExtra("eventId", eventId)
+        context?.startActivity(intent)
+    }
+
+    @ReactMethod
+    fun presentPurchase(eventId: String) {
+        val context = currentActivity
+        val intent = Intent(context, PurchaseActivity::class.java)
+        intent.putExtra("eventId", eventId)
+        context?.startActivity(intent)
     }
 
     @ReactMethod

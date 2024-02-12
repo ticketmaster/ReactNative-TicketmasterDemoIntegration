@@ -34,4 +34,8 @@ RCT_EXTERN_METHOD(getToken: (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRe
 
 RCT_EXTERN_METHOD(isLoggedIn: (RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(presentPrePurchase:(NSString *)attractionId)
+
+RCT_EXTERN_METHOD(presentPurchase: (NSString *)venueId)
+
 @end

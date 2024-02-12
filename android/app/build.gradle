@@ -130,12 +130,13 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     implementation 'com.google.code.gson:gson:2.10.1'
 
-    implementation 'com.ticketmaster.tickets:tickets:3.2.0'
+    implementation 'com.ticketmaster.tickets:tickets:3.2.1'
     implementation 'com.ticketmaster.tickets:secure-entry:1.2.8'
-    implementation "com.ticketmaster.retail:purchase:1.0.8"
-    implementation "com.ticketmaster.retail:prepurchase:1.0.5"
-    implementation "com.ticketmaster.retail:discoveryapi:1.0.2"
-    implementation 'com.ticketmaster.accounts:authentication:3.2.0'
+    implementation "com.ticketmaster.retail:purchase:2.0.0"
+    implementation "com.ticketmaster.retail:prepurchase:2.0.0"
+    implementation "com.ticketmaster.retail:discoveryapi:2.0.0"
+    implementation 'com.ticketmaster.accounts:authentication:3.3.0'
+    implementation "com.ticketmaster.retail:foundation:2.0.0"
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
