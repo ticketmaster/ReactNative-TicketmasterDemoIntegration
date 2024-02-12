@@ -23,8 +23,16 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
-        <activity
-            android:name=".retail.PrePurchaseActivity"
+      <activity android:name=".retail.PurchaseActivity"
+          android:label="testing"
+          android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+          android:launchMode="singleTask"
+          android:windowSoftInputMode="adjustResize"
+          android:exported="true">
+          >
+      </activity>
+        <activity android:name=".tickets.TicketsSdkHostActivity"
+            android:label="testing"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize"
@@ -35,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".retail.PurchaseActivity"
+            android:name=".retail.PrePurchaseActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize"

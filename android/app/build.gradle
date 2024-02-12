@@ -130,7 +130,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     implementation 'com.google.code.gson:gson:2.10.1'
 
-    implementation 'com.ticketmaster.tickets:tickets:3.2.1'
+    implementation 'com.ticketmaster.tickets:tickets:3.3.1'
     implementation 'com.ticketmaster.tickets:secure-entry:1.2.8'
     implementation "com.ticketmaster.retail:purchase:2.0.0"
     implementation "com.ticketmaster.retail:prepurchase:2.0.0"

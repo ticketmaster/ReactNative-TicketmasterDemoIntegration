@@ -16,6 +16,7 @@ import com.facebook.react.bridge.ReactMethod
 import com.google.gson.Gson
 import com.rnticketmasterdemointegration.retail.PrePurchaseActivity
 import com.rnticketmasterdemointegration.retail.PurchaseActivity
+import com.rnticketmasterdemointegration.tickets.TicketsSdkHostActivity
 import com.ticketmaster.authenticationsdk.AuthSource
 import com.ticketmaster.authenticationsdk.TMAuthentication
 import com.ticketmaster.authenticationsdk.TMXDeploymentEnvironment
@@ -68,6 +69,21 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
             val intent = authentication.getLoginIntent(currentFragmentActivity)
             currentActivity?.startActivityForResult(intent, CODE)
         }
+    }
+
+    @ReactMethod
+    fun navigateToPurchase(eventId: String) {
+        val context = currentActivity
+        val intent = Intent(context, PurchaseActivity::class.java)
+        intent.putExtra("eventId", eventId)
+        context?.startActivity(intent)
+    }
+
+    @ReactMethod
+    fun navigateToTickets() {
+        val context = currentActivity
+        val intent = Intent(context, TicketsSdkHostActivity::class.java)
+        context?.startActivity(intent)
     }
 
     @ReactMethod

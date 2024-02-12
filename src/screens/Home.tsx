@@ -59,6 +59,14 @@ const Home = () => {
           last: true,
         },
         {
+          title: 'Show Tickets',
+          platforms: ['android'],
+          onPress: () => {
+            AccountsSDK.navigateToTickets();
+          },
+          last: true,
+        },
+        {
           title: 'Show Retail PrePurchase',
           platforms: ['android', 'ios'],
           onPress: () => {
