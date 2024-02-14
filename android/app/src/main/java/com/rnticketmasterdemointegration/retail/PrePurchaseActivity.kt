@@ -8,6 +8,7 @@ import com.rnticketmasterdemointegration.BuildConfig
 import com.rnticketmasterdemointegration.R
 import com.ticketmaster.discoveryapi.enums.TMMarketDomain
 import com.ticketmaster.discoveryapi.models.DiscoveryAbstractEntity
+import com.ticketmaster.discoveryapi.models.DiscoveryAttraction
 import com.ticketmaster.discoveryapi.models.DiscoveryVenue
 import com.ticketmaster.prepurchase.TMPrePurchase
 import com.ticketmaster.prepurchase.TMPrePurchaseFragmentFactory
@@ -27,9 +28,15 @@ class PrePurchaseActivity : AppCompatActivity() {
                 R.color.black
             )
         )
-        val eventId = intent.getStringExtra("eventId")
+        val venueId = intent.getStringExtra("venueId")
+        val attractionId = intent.getStringExtra("attractionId")
 
-        val discoveryVenue: DiscoveryAbstractEntity = DiscoveryVenue(hostID = eventId)
+        val discoveryVenue: DiscoveryAbstractEntity = if (!venueId.isNullOrEmpty()) {
+            DiscoveryVenue(hostID = venueId)
+        } else {
+            DiscoveryAttraction(hostID = attractionId)
+        }
+
         val tmPrePurchaseWebsiteConfiguration = TMPrePurchaseWebsiteConfiguration(
             discoveryVenue,
             TMMarketDomain.US,
