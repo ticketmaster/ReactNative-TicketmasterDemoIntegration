@@ -134,10 +134,18 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
     }
 
     @ReactMethod
-    fun presentPrePurchase(eventId: String) {
+    fun presentPrePurchaseVenue(venueId: String) {
         val context = currentActivity
         val intent = Intent(context, PrePurchaseActivity::class.java)
-        intent.putExtra("eventId", eventId)
+        intent.putExtra("venueId", venueId)
+        context?.startActivity(intent)
+    }
+
+    @ReactMethod
+    fun presentPrePurchaseAttraction(attractionId: String) {
+        val context = currentActivity
+        val intent = Intent(context, PrePurchaseActivity::class.java)
+        intent.putExtra("attractionId", attractionId)
         context?.startActivity(intent)
     }
 

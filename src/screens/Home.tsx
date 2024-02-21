@@ -59,10 +59,18 @@ const Home = () => {
           last: true,
         },
         {
-          title: 'Show Retail PrePurchase',
+          title: 'Show Retail PrePurchase Venue',
           platforms: ['android', 'ios'],
           onPress: () => {
-            AccountsSDK.presentPrePurchase(Config.DEMO_ATTRACTION_ID);
+            AccountsSDK.presentPrePurchaseVenue(Config.DEMO_EVENT_ID);
+          },
+          last: true,
+        },
+        {
+          title: 'Show Retail PrePurchase Attraction',
+          platforms: ['android', 'ios'],
+          onPress: () => {
+            AccountsSDK.presentPrePurchaseAttraction(Config.DEMO_ATTRACTION_ID);
           },
           last: true,
         },

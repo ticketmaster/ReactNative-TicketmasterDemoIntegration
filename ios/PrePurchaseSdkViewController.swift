@@ -12,7 +12,8 @@ import TicketmasterPrePurchase
 import TicketmasterPurchase
 
 class PrePurchaseSdkViewController: UIViewController {
-  var attractionId: String = "attractionId"
+  var attractionId: String = ""
+  var venueId: String = ""
   
   func prePurchaseViewController(_ viewController: TicketmasterPrePurchase.TMPrePurchaseViewController, navigateToEventDetailsPageWithIdentifier eventIdentifier: String) {
     let configuration = TMPurchaseWebsiteConfiguration(eventID: eventIdentifier)
@@ -26,7 +27,7 @@ class PrePurchaseSdkViewController: UIViewController {
       })
     })
   }
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -47,38 +48,38 @@ class PrePurchaseSdkViewController: UIViewController {
       TMDiscoveryAPI.shared.configure(apiKey: apiKey, completion: { isDiscoveryApiSet in
         print("Discovery api key set result: \(isDiscoveryApiSet)")
         TMPrePurchase.shared.brandColor = UIColor(red: 0.19, green: 0.02, blue: 0.16, alpha: 1.00)
-        
-        // Tickets is configured, now we are ready to present TMTicketsViewController or TMTicketsView
-        print(" - Tickets SDK Configured")
-        
-        let viewController = TMPrePurchaseViewController.attractionDetailsViewController(attractionIdentifier: self.attractionId, enclosingEnvironment: .modalPresentation)
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: false)
-        
-        
-      } failure: { error in
-        // something went wrong, probably TMAuthentication was not configured correctly
-        print(" - Tickets SDK Configuration Error: \(error.localizedDescription)")
-      }
-      
-      
-      
-    } failure: { error in
-      // something went wrong, probably the wrong apiKey+region combination
-      print(" - Authentication SDK Configuration Error: \(error.localizedDescription)")
-    }
-    
+        TMAuthentication.shared.configure(brandedServiceSettings: brandedServiceSettings) { backendsConfigured in
+          // Tickets is configured, now we are ready to present TMTicketsViewController or TMTicketsView
+          print(" - Tickets SDK Configured")
+          TMTickets.shared.configure {
+            let viewController = !self.venueId.isEmpty ? TMPrePurchaseViewController.venueDetailsViewController(venueIdentifier: self.venueId, enclosingEnvironment: .modalPresentation) : TMPrePurchaseViewController.attractionDetailsViewController(attractionIdentifier: self.attractionId, enclosingEnvironment: .modalPresentation)
+            
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: false)
+          } failure: { error in
+            // something went wrong, probably TMAuthentication was not configured correctly
+            print(" - Tickets SDK Configuration Error: \(error.localizedDescription)")
+          }
+        } failure: { error in
+          // something went wrong, probably the wrong apiKey+region combination
+          print(" - Authentication SDK Configuration Error: \(error.localizedDescription)")
+        }
+      })
+    })
   }
   
-  func sendAttractionIdFromView(attractionIdProp: String) {
-    print("Received data in UIViewController: \(attractionIdProp)")
+  func setAttractionId(attractionIdProp: String) {
     attractionId = attractionIdProp
+  }
+  
+  func setVenueId(venueIdProp: String) {
+    venueId = venueIdProp
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     print("PrePurchaseSdkViewController viewDidAppear")
-   
+    
   }
   
 }

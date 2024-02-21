@@ -95,9 +95,15 @@ class AccountsSDK: RCTEventEmitter, TMAuthenticationDelegate  {
     }
   }
   
-  @objc public func presentPrePurchase(_ attractionId: String) {
+  @objc public func presentPrePurchaseVenue(_ venueId: String) {
     let viewController = PrePurchaseSdkViewController()
-    viewController.sendAttractionIdFromView(attractionIdProp: attractionId)
+    viewController.setVenueId(venueIdProp: venueId)
+    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(viewController, animated: true)
+  }
+  
+  @objc public func presentPrePurchaseAttraction(_ attractionId: String) {
+    let viewController = PrePurchaseSdkViewController()
+    viewController.setAttractionId(attractionIdProp: attractionId)
     UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(viewController, animated: true)
   }
   
