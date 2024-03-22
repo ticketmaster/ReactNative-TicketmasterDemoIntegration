@@ -29,6 +29,7 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
+
 class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
     private val CODE = 1
     override fun getName() = "AccountsSDK"
@@ -124,7 +125,7 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
                         .environment(TMXDeploymentEnvironment.Production)
                         .region(TMXDeploymentRegion.US)
                         .build(currentFragmentActivity)
-                    authentication.logout()
+                    authentication.logout(currentFragmentActivity)
                     promise.resolve(true)
                 } catch(e: Exception) {
                     promise.resolve(false)
