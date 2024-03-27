@@ -27,10 +27,6 @@
 		C41E75F52A97ACB7006DA89D /* AccountsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75F42A97ACB7006DA89D /* AccountsSDK.m */; };
 		C41E75F72A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E75F62A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift */; };
 		C41E75F92A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75F82A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m */; };
-		C41E75FB2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */; };
-		C41E75FD2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */; };
-		C41E75FF2A97ADE6006DA89D /* PurchaseSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E75FE2A97ADE6006DA89D /* PurchaseSdkViewController.swift */; };
-		C41E76012A97ADF9006DA89D /* PrePurchaseSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */; };
 		C4B69D2D2A9F9C7D00BD78CC /* TicketsSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */; };
 		C4B69D2F2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */; };
 /* End PBXBuildFile section */
@@ -69,10 +65,6 @@
 		C41E75F42A97ACB7006DA89D /* AccountsSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountsSDK.m; sourceTree = "<group>"; };
 		C41E75F62A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsSdkEmbeddedViewController.swift; sourceTree = "<group>"; };
 		C41E75F82A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTTicketsSdkEmbeddedViewManager.m; sourceTree = "<group>"; };
-		C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTPrePurchaseSdkViewManager.m; sourceTree = "<group>"; };
-		C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTPurchaseSdkViewManager.m; sourceTree = "<group>"; };
-		C41E75FE2A97ADE6006DA89D /* PurchaseSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSdkViewController.swift; sourceTree = "<group>"; };
-		C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePurchaseSdkViewController.swift; sourceTree = "<group>"; };
 		C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsSdkViewController.swift; sourceTree = "<group>"; };
 		C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTTicketsSdkViewController.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -135,13 +127,9 @@
 				C41E75F22A97ABFE006DA89D /* AccountsSDK.swift */,
 				C41E75F62A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift */,
 				C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */,
-				C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */,
-				C41E75FE2A97ADE6006DA89D /* PurchaseSdkViewController.swift */,
 				C41E75F42A97ACB7006DA89D /* AccountsSDK.m */,
 				C41E75F82A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m */,
 				C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */,
-				C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */,
-				C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */,
 				0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */,
 				0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */,
 			);
@@ -479,16 +467,12 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				C4B69D2F2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				C41E75FF2A97ADE6006DA89D /* PurchaseSdkViewController.swift in Sources */,
-				C41E75FB2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m in Sources */,
 				0D0FFDEC2BB43D4000E3F4E1 /* PurchaseSDK.swift in Sources */,
-				C41E76012A97ADF9006DA89D /* PrePurchaseSdkViewController.swift in Sources */,
 				C41E75F72A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift in Sources */,
 				C41E75F52A97ACB7006DA89D /* AccountsSDK.m in Sources */,
 				C4B69D2D2A9F9C7D00BD78CC /* TicketsSdkViewController.swift in Sources */,
 				0D0FFDD52BB41BB200E3F4E1 /* PrePurchaseSDK.swift in Sources */,
 				C41E75F92A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m in Sources */,
-				C41E75FD2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m in Sources */,
 				C41E75F32A97ABFE006DA89D /* AccountsSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
