@@ -1,4 +1,5 @@
 {
+  "originHash" : "0f88ce856252f93bdf76ef243fd92a06f175a642768a85e9663f041249ef67ae",
   "pins" : [
     {
       "identity" : "ios-ticketmastersdk",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

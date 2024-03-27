@@ -62,7 +62,7 @@ const Home = () => {
           title: 'Show Retail PrePurchase Venue',
           platforms: ['android', 'ios'],
           onPress: () => {
-            AccountsSDK.presentPrePurchaseVenue(Config.DEMO_EVENT_ID);
+            AccountsSDK.presentPrePurchaseVenue(Config.DEMO_VENUE_ID);
           },
           last: true,
         },
