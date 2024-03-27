@@ -103,10 +103,8 @@ class AccountsSDK: RCTEventEmitter, TMAuthenticationDelegate  {
     PrePurchaseSDK.loadSDKView("", attractionId: attractionId)
   }
   
-  @objc public func presentPurchase(_ venueId: String) {
-    let viewController = PurchaseSdkViewController()
-    viewController.sendEventIdFromView(eventIdProp: venueId)
-    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(viewController, animated: true)
+  @objc public func presentPurchase(_ eventId: String) {
+    PurchaseSDK.loadSDKView(eventId)
   }
   
   @objc public func getMemberInfo(_ resolve: @escaping ([String: Any]) -> Void, reject: @escaping (_ code: String, _ message: String, _ error: NSError) -> Void) {

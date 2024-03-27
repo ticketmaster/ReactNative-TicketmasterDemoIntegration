@@ -17,6 +17,7 @@
 		0D0FFDD22BB41A4900E3F4E1 /* TicketmasterSecureEntry in Frameworks */ = {isa = PBXBuildFile; productRef = F36D851B2B6821F7007B5770 /* TicketmasterSecureEntry */; };
 		0D0FFDD32BB41A4900E3F4E1 /* TicketmasterTickets in Frameworks */ = {isa = PBXBuildFile; productRef = F36D851D2B6821F7007B5770 /* TicketmasterTickets */; };
 		0D0FFDD52BB41BB200E3F4E1 /* PrePurchaseSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */; };
+		0D0FFDEC2BB43D4000E3F4E1 /* PurchaseSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -49,6 +50,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNTicketmasterDemoIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTicketmasterDemoIntegrationTests.m; sourceTree = "<group>"; };
 		0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePurchaseSDK.swift; sourceTree = "<group>"; };
+		0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSDK.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNTicketmasterDemoIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTicketmasterDemoIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNTicketmasterDemoIntegration/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = RNTicketmasterDemoIntegration/AppDelegate.mm; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */,
 				C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */,
 				0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */,
+				0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */,
 			);
 			name = RNTicketmasterDemoIntegration;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				C41E75FF2A97ADE6006DA89D /* PurchaseSdkViewController.swift in Sources */,
 				C41E75FB2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m in Sources */,
+				0D0FFDEC2BB43D4000E3F4E1 /* PurchaseSDK.swift in Sources */,
 				C41E76012A97ADF9006DA89D /* PrePurchaseSdkViewController.swift in Sources */,
 				C41E75F72A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift in Sources */,
 				C41E75F52A97ACB7006DA89D /* AccountsSDK.m in Sources */,
