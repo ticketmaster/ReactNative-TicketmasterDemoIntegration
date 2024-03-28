@@ -66,7 +66,8 @@ For the Retail SDK (PrePurchase and Purchase) views, you will need an event ID, 
 
 ```bash
 API_KEY=someapikey
-DEMO_EVENT_ID=04005EF94A0053AD
+DEMO_EVENT_ID=22005F16A57CCE50
 DEMO_ATTRACTION_ID=1646704
 DEMO_HOST_ID=82789
+DEMO_VENUE_ID=KovZpZAEdntA
 ```

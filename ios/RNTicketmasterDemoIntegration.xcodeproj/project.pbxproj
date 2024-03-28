@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RNTicketmasterDemoIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNTicketmasterDemoIntegrationTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-RNTicketmasterDemoIntegration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RNTicketmasterDemoIntegration.a */; };
+		0D0FFDCD2BB41A4900E3F4E1 /* TicketmasterAuthentication in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85112B6821F7007B5770 /* TicketmasterAuthentication */; };
+		0D0FFDCE2BB41A4900E3F4E1 /* TicketmasterDiscoveryAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85132B6821F7007B5770 /* TicketmasterDiscoveryAPI */; };
+		0D0FFDCF2BB41A4900E3F4E1 /* TicketmasterFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85152B6821F7007B5770 /* TicketmasterFoundation */; };
+		0D0FFDD02BB41A4900E3F4E1 /* TicketmasterPrePurchase in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85172B6821F7007B5770 /* TicketmasterPrePurchase */; };
+		0D0FFDD12BB41A4900E3F4E1 /* TicketmasterPurchase in Frameworks */ = {isa = PBXBuildFile; productRef = F36D85192B6821F7007B5770 /* TicketmasterPurchase */; };
+		0D0FFDD22BB41A4900E3F4E1 /* TicketmasterSecureEntry in Frameworks */ = {isa = PBXBuildFile; productRef = F36D851B2B6821F7007B5770 /* TicketmasterSecureEntry */; };
+		0D0FFDD32BB41A4900E3F4E1 /* TicketmasterTickets in Frameworks */ = {isa = PBXBuildFile; productRef = F36D851D2B6821F7007B5770 /* TicketmasterTickets */; };
+		0D0FFDD52BB41BB200E3F4E1 /* PrePurchaseSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */; };
+		0D0FFDEC2BB43D4000E3F4E1 /* PurchaseSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -18,19 +27,8 @@
 		C41E75F52A97ACB7006DA89D /* AccountsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75F42A97ACB7006DA89D /* AccountsSDK.m */; };
 		C41E75F72A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E75F62A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift */; };
 		C41E75F92A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75F82A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m */; };
-		C41E75FB2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */; };
-		C41E75FD2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */; };
-		C41E75FF2A97ADE6006DA89D /* PurchaseSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E75FE2A97ADE6006DA89D /* PurchaseSdkViewController.swift */; };
-		C41E76012A97ADF9006DA89D /* PrePurchaseSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */; };
 		C4B69D2D2A9F9C7D00BD78CC /* TicketsSdkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */; };
 		C4B69D2F2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */; };
-		C4B8B7512AC310EF0093749A /* TicketmasterAuthentication in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7502AC310EF0093749A /* TicketmasterAuthentication */; };
-		C4B8B7532AC310EF0093749A /* TicketmasterDiscoveryAPI in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7522AC310EF0093749A /* TicketmasterDiscoveryAPI */; };
-		C4B8B7552AC310EF0093749A /* TicketmasterFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7542AC310EF0093749A /* TicketmasterFoundation */; };
-		C4B8B7572AC310EF0093749A /* TicketmasterPrePurchase in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7562AC310EF0093749A /* TicketmasterPrePurchase */; };
-		C4B8B7592AC310EF0093749A /* TicketmasterPurchase in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B7582AC310EF0093749A /* TicketmasterPurchase */; };
-		C4B8B75B2AC310EF0093749A /* TicketmasterSecureEntry in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B75A2AC310EF0093749A /* TicketmasterSecureEntry */; };
-		C4B8B75D2AC310EF0093749A /* TicketmasterTickets in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8B75C2AC310EF0093749A /* TicketmasterTickets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +45,8 @@
 		00E356EE1AD99517003FC87E /* RNTicketmasterDemoIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNTicketmasterDemoIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNTicketmasterDemoIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTicketmasterDemoIntegrationTests.m; sourceTree = "<group>"; };
+		0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePurchaseSDK.swift; sourceTree = "<group>"; };
+		0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSDK.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNTicketmasterDemoIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTicketmasterDemoIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNTicketmasterDemoIntegration/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = RNTicketmasterDemoIntegration/AppDelegate.mm; sourceTree = "<group>"; };
@@ -65,10 +65,6 @@
 		C41E75F42A97ACB7006DA89D /* AccountsSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountsSDK.m; sourceTree = "<group>"; };
 		C41E75F62A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsSdkEmbeddedViewController.swift; sourceTree = "<group>"; };
 		C41E75F82A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTTicketsSdkEmbeddedViewManager.m; sourceTree = "<group>"; };
-		C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTPrePurchaseSdkViewManager.m; sourceTree = "<group>"; };
-		C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTPurchaseSdkViewManager.m; sourceTree = "<group>"; };
-		C41E75FE2A97ADE6006DA89D /* PurchaseSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSdkViewController.swift; sourceTree = "<group>"; };
-		C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrePurchaseSdkViewController.swift; sourceTree = "<group>"; };
 		C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsSdkViewController.swift; sourceTree = "<group>"; };
 		C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTTicketsSdkViewController.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -87,13 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36D85182B6821F7007B5770 /* TicketmasterPrePurchase in Frameworks */,
-				F36D851A2B6821F7007B5770 /* TicketmasterPurchase in Frameworks */,
-				F36D851E2B6821F7007B5770 /* TicketmasterTickets in Frameworks */,
-				F36D85142B6821F7007B5770 /* TicketmasterDiscoveryAPI in Frameworks */,
-				F36D85162B6821F7007B5770 /* TicketmasterFoundation in Frameworks */,
-				F36D85122B6821F7007B5770 /* TicketmasterAuthentication in Frameworks */,
-				F36D851C2B6821F7007B5770 /* TicketmasterSecureEntry in Frameworks */,
+				0D0FFDD32BB41A4900E3F4E1 /* TicketmasterTickets in Frameworks */,
+				0D0FFDD22BB41A4900E3F4E1 /* TicketmasterSecureEntry in Frameworks */,
+				0D0FFDD12BB41A4900E3F4E1 /* TicketmasterPurchase in Frameworks */,
+				0D0FFDD02BB41A4900E3F4E1 /* TicketmasterPrePurchase in Frameworks */,
+				0D0FFDCF2BB41A4900E3F4E1 /* TicketmasterFoundation in Frameworks */,
+				0D0FFDCE2BB41A4900E3F4E1 /* TicketmasterDiscoveryAPI in Frameworks */,
+				0D0FFDCD2BB41A4900E3F4E1 /* TicketmasterAuthentication in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-RNTicketmasterDemoIntegration.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,13 +127,11 @@
 				C41E75F22A97ABFE006DA89D /* AccountsSDK.swift */,
 				C41E75F62A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift */,
 				C4B69D2C2A9F9C7D00BD78CC /* TicketsSdkViewController.swift */,
-				C41E76002A97ADF9006DA89D /* PrePurchaseSdkViewController.swift */,
-				C41E75FE2A97ADE6006DA89D /* PurchaseSdkViewController.swift */,
 				C41E75F42A97ACB7006DA89D /* AccountsSDK.m */,
 				C41E75F82A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m */,
 				C4B69D2E2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m */,
-				C41E75FA2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m */,
-				C41E75FC2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m */,
+				0D0FFDD42BB41BB200E3F4E1 /* PrePurchaseSDK.swift */,
+				0D0FFDEB2BB43D4000E3F4E1 /* PurchaseSDK.swift */,
 			);
 			name = RNTicketmasterDemoIntegration;
 			sourceTree = "<group>";
@@ -473,14 +467,12 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				C4B69D2F2A9F9CA500BD78CC /* RNTTicketsSdkViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				C41E75FF2A97ADE6006DA89D /* PurchaseSdkViewController.swift in Sources */,
-				C41E75FB2A97AD50006DA89D /* RNTPrePurchaseSdkViewManager.m in Sources */,
-				C41E76012A97ADF9006DA89D /* PrePurchaseSdkViewController.swift in Sources */,
+				0D0FFDEC2BB43D4000E3F4E1 /* PurchaseSDK.swift in Sources */,
 				C41E75F72A97ACFF006DA89D /* TicketsSdkEmbeddedViewController.swift in Sources */,
 				C41E75F52A97ACB7006DA89D /* AccountsSDK.m in Sources */,
 				C4B69D2D2A9F9C7D00BD78CC /* TicketsSdkViewController.swift in Sources */,
+				0D0FFDD52BB41BB200E3F4E1 /* PrePurchaseSDK.swift in Sources */,
 				C41E75F92A97AD38006DA89D /* RNTTicketsSdkEmbeddedViewManager.m in Sources */,
-				C41E75FD2A97AD61006DA89D /* RNTPurchaseSdkViewManager.m in Sources */,
 				C41E75F32A97ABFE006DA89D /* AccountsSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

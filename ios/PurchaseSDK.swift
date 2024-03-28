@@ -1,8 +1,8 @@
 //
-//  PurchaseSdkViewController.swift
+//  PurchaseSDK.swift
 //  RNTicketmasterDemoIntegration
 //
-//  Created by Daniel Olugbade on 24/08/2023.
+//  Created by justyna zygmunt on 27/03/2024.
 //
 
 import TicketmasterAuthentication
@@ -10,12 +10,10 @@ import TicketmasterTickets
 import TicketmasterPurchase
 import TicketmasterDiscoveryAPI
 
-class PurchaseSdkViewController: UIViewController {
-  var eventId: String = "eventId"
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
+
+@objc(PurchaseSDK)
+class PurchaseSDK: NSObject {
+  @objc public static func loadSDKView(_ eventId: String) {
     let apiKey = RNCConfig.env(for: "API_KEY") ?? ""
     let tmxServiceSettings = TMAuthentication.TMXSettings(apiKey: apiKey,
                                                           region: .US)
@@ -26,7 +24,6 @@ class PurchaseSdkViewController: UIViewController {
     
     let brandedServiceSettings = TMAuthentication.BrandedServiceSettings(tmxSettings: tmxServiceSettings,
                                                                          branding: branding)
-    
     
     TMPurchase.shared.configure(apiKey: apiKey, completion: {
       isPurchaseApiSet in
@@ -40,10 +37,10 @@ class PurchaseSdkViewController: UIViewController {
           
           TMTickets.shared.configure {
             
-            let edpNav = TMPurchaseNavigationController.eventDetailsNavigationController(eventIdentifier: self.eventId, marketDomain: .US)
+            let edpNav = TMPurchaseNavigationController.eventDetailsNavigationController(eventIdentifier: eventId, marketDomain: .US)
             edpNav.modalPresentationStyle = .fullScreen
-            self.present(edpNav, animated: false)
-            
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(edpNav, animated: true)
+
           } failure: { error in
             // something went wrong, probably TMAuthentication was not configured correctly
             print(" - Tickets SDK Configuration Error: \(error.localizedDescription)")
@@ -55,19 +52,5 @@ class PurchaseSdkViewController: UIViewController {
       })
     })
   }
-  
-  func sendEventIdFromView(eventIdProp: String) {
-    print("Received data in UIViewController: \(eventIdProp)")
-    eventId = eventIdProp
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    print("PurchaseSdkViewController viewDidAppear")
-  }
-  
-  @objc(setEventIdProp:)
-  public func setEventIdProp(_ eventIdProp: NSString) {
-    eventId = eventIdProp as String
-  }
 }
+
