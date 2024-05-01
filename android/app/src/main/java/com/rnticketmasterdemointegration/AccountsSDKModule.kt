@@ -124,7 +124,7 @@ class AccountsSDKModule(reactContext: ReactApplicationContext) : ReactContextBas
                         .environment(TMXDeploymentEnvironment.Production)
                         .region(TMXDeploymentRegion.US)
                         .build(currentFragmentActivity)
-                    authentication.logout()
+                    authentication.logout(currentFragmentActivity)
                     promise.resolve(true)
                 } catch(e: Exception) {
                     promise.resolve(false)
