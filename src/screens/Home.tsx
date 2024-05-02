@@ -50,13 +50,11 @@ const Home = () => {
           title: 'Get Member Info',
           platforms: ['ios', 'android'],
           onPress: () => getMemberInfo(),
-          last: true,
         },
         {
           title: 'Get Token',
           platforms: ['ios', 'android'],
           onPress: () => getToken(),
-          last: true,
         },
         {
           title: 'Show Retail PrePurchase Venue',
@@ -64,7 +62,6 @@ const Home = () => {
           onPress: () => {
             AccountsSDK.presentPrePurchaseVenue(Config.DEMO_VENUE_ID);
           },
-          last: true,
         },
         {
           title: 'Show Retail PrePurchase Attraction',
@@ -72,7 +69,6 @@ const Home = () => {
           onPress: () => {
             AccountsSDK.presentPrePurchaseAttraction(Config.DEMO_ATTRACTION_ID);
           },
-          last: true,
         },
         {
           title: 'Show Retail Purchase',
