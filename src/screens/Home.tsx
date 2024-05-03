@@ -8,7 +8,6 @@ import {
   View,
 } from 'react-native';
 import {NativeModules} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import ChevronRight from '../assets/svg/ChevronRight';
 import {TicketsSdk} from '../components/TicketsSdk.ios';
 import Config from 'react-native-config';
@@ -185,53 +184,53 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView>
-      <>
-        <SectionList
-          sections={DATA}
-          keyExtractor={(item, index) => item.title + index}
-          renderItem={({item}) => (
-            <>
-              {item.platforms.includes(Platform.OS) && (
-                <>
-                  <Pressable
-                    onPress={() => item.onPress && item.onPress()}
-                    style={({pressed}) => [
-                      styles.item,
-                      item.first && styles.topItem,
-                      item.last && styles.bottomItem,
-                      {
-                        backgroundColor: pressed ? '#00000008' : 'white',
-                      },
-                    ]}>
-                    <Text style={styles.title}>{item.title}</Text>
-                    <View>
-                      <ChevronRight />
-                    </View>
-                  </Pressable>
+    <>
+      <SectionList
+        sections={DATA}
+        stickySectionHeadersEnabled={false}
+        keyExtractor={(item, index) => item.title + index}
+        renderItem={({item}) => (
+          <>
+            {item.platforms.includes(Platform.OS) && (
+              <>
+                <Pressable
+                  onPress={() => item.onPress && item.onPress()}
+                  style={({pressed}) => [
+                    styles.item,
+                    item.first && styles.topItem,
+                    item.last && styles.bottomItem,
+                    {
+                      backgroundColor: pressed ? '#00000008' : 'white',
+                    },
+                  ]}>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <View>
+                    <ChevronRight />
+                  </View>
+                </Pressable>
 
-                  {!item.last && <View style={styles.horizontalLine} />}
-                </>
-              )}
-            </>
-          )}
-          renderSectionHeader={({section: {header, data}}) => (
-            <>
-              {data.some(item => item.platforms.includes(Platform.OS)) && (
-                <View style={styles.headerWrapper}>
-                  <Text style={styles.header}>{header}</Text>
-                </View>
-              )}
-            </>
-          )}
-        />
-        {showTicketsSdk && (
-          <View>
-            <TicketsSdk />
-          </View>
+                {!item.last && <View style={styles.horizontalLine} />}
+              </>
+            )}
+          </>
         )}
-      </>
-    </SafeAreaView>
+        renderSectionHeader={({section: {header, data}}) => (
+          <>
+            {data.some(item => item.platforms.includes(Platform.OS)) && (
+              <View style={styles.headerWrapper}>
+                <Text style={styles.header}>{header}</Text>
+              </View>
+            )}
+          </>
+        )}
+        contentContainerStyle={styles.listPadding}
+      />
+      {showTicketsSdk && (
+        <View>
+          <TicketsSdk />
+        </View>
+      )}
+    </>
   );
 };
 
@@ -258,8 +257,11 @@ const styles = StyleSheet.create({
   },
   headerWrapper: {
     marginLeft: 20,
-    marginTop: 24,
+    marginTop: 14,
     marginBottom: 8,
+  },
+  listPadding: {
+    paddingBottom: 60,
   },
   title: {
     fontSize: 16,
