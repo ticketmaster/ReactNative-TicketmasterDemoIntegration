@@ -4,7 +4,7 @@ This is an example integration of the Ticketmaster Ignite SDK, Retail, Tickets, 
 
 # Getting Started
 
-> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions until the "Creating a new application" step, before proceeding.
 
 # Running the app
 
